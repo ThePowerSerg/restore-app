@@ -1,22 +1,14 @@
-import type { product } from "../../app/models/product"
+import type { Product } from "../../app/models/product"
+import ProductList from "./ProductList";
 
-type Props = {
-    products: product[];
-    addProduct: () => void;
+interface ListProducts {
+    productsList: Product[];
 }
 
-export default function Catalog({products, addProduct}: Props) {
+export default function Catalog({productsList}: ListProducts) {
     return (
         <>
-            <div>Big Serg</div>
-            <ul>
-                {
-                   products.map(item => (
-                   <li key={item.id}>{item.name} - {item.price}</li>
-                  ))
-                }
-            </ul>
-            <button onClick={addProduct}>Submit</button>
+            <ProductList productsforCards={productsList} />
         </>
     )
 }

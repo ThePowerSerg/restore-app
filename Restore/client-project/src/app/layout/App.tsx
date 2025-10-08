@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import type { product } from "../models/product";
+import type { Product } from "../models/product";
 import Catalog from "../../features/catalog/Catalog";
+import { Box, Button, Container, Typography } from "@mui/material";
 
 function App() {
 
- const [products, setProducts] = useState<product[]>([]);
+ const [products, setProducts] = useState<Product[]>([]);
 
  useEffect(() => {
   fetch('http://localhost:5294/api/products')
@@ -26,10 +27,13 @@ function App() {
   }
 
   return (
-    <>
-        <h1 style={{color: 'magenta'}}>ReStore</h1>
-        <Catalog products={products} addProduct={addProduct} />
-    </>
+    <Container maxWidth='xl'>
+      <Box display='flex' justifyContent= 'center' gap={3} marginY={3}>
+        <Typography variant='h4'>ReStore</Typography>
+        <Button variant='contained' onClick={addProduct}>Submit</Button>
+      </Box>
+      <Catalog productsList={products} />
+    </Container>
   )
 }
 
