@@ -32,7 +32,6 @@ function App() {
           background: darkMode ? '#121212' : '#eaeaea'
       }}>
         <Container maxWidth='xl' sx={{ mt: 14 }}>
-          {/* <Catalog /> */}
           <Outlet/>
         </Container>
       </Box>
