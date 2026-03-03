@@ -1,6 +1,7 @@
  import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
  import type { Product } from "../../app/models/product";
 
+ //Redux Toolk Kit
  export const catalogApi = createApi ({
     reducerPath: 'catalogApi',
     baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5294/api'}),
