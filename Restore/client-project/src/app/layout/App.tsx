@@ -3,13 +3,20 @@ import { Box, Container, createTheme, CssBaseline, ThemeProvider } from "@mui/ma
 import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
 
+// getst the initial state of the darkmode from local storage
+const getInitialDarkMode = () => {
+  const storedDarkMode = localStorage.getItem('darkMode');
+  return storedDarkMode ? JSON.parse(storedDarkMode) : true
+}
+
 function App() {
-  
+
   //define the state
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(getInitialDarkMode());
   //set the state
   const toggleDarkMode = () => {
-    setDarkMode (!darkMode)
+    localStorage.setItem('darkMode', JSON.stringify(!darkMode))
+    setDarkMode(!darkMode)
   }
 
   const palleteType = darkMode ? 'dark' : 'light'

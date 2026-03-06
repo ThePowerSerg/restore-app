@@ -5,7 +5,7 @@ const customBaseQuery = fetchBaseQuery({
     baseUrl: 'http://localhost:5294/api'
 });
 
-const sleep = () => new Promise(resolve => setTimeout(resolve, 5000));
+const sleep = () => new Promise(resolve => setTimeout(resolve, 1000));
 
 export const baseQuerywithErrorHandling = async (args: string | FetchArgs, api: BaseQueryApi, extraOptions: object) =>
     {
