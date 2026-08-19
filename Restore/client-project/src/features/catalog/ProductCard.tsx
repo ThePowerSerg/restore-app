@@ -5,7 +5,7 @@ import { Link } from "react-router"
 interface ProductProp {
     productDef : Product
 }
-
+ 
 export default function ProductCard({ productDef }: ProductProp) {
     return (
         <Card elevation={3} 
