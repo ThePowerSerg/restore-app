@@ -418,3 +418,4 @@ FodyWeavers.xsd
 *.msp
 Restore/API/appsettings.json
 Restore/client-project/src/.env.production
+Restore/API/wwwroot/*
