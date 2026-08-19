@@ -417,3 +417,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 Restore/API/appsettings.json
+Restore/client-project/src/.env.production
