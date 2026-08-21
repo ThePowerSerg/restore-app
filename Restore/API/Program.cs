@@ -23,6 +23,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// just an expection value 
 //app.UseMiddleware<ExceptionMiddleware>();
 app.UseDefaultFiles();
 app.UseStaticFiles();
