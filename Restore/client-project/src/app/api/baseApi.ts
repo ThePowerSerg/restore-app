@@ -2,7 +2,7 @@ import { fetchBaseQuery, type BaseQueryApi, type FetchArgs } from "@reduxjs/tool
 import { startLoading, stopLoading } from "../layout/uiSlice";
 
 const customBaseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:5294/api'
+    baseUrl: '/api'
 });
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 1000));

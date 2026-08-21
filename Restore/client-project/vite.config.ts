@@ -8,5 +8,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 1024,
     emptyOutDir: true
   },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:5294'
+    }
+  },
   plugins: [react()],
 })
